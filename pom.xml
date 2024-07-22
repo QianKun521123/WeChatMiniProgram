@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定POM模型的版本 -->
     <modelVersion>4.0.0</modelVersion>
+    <!-- 指定父项目依赖 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- 定义Maven项目隶属组织名称 -->
+    <groupId>com.gwf</groupId>
+    <!-- 定义Maven项目名称 -->
+    <artifactId>WeChatMiniProgram</artifactId>
+    <!-- 项目版本号 -->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 用于描述项目的名称，可选的标签之一。通常用于提供有关项目的简短描述或标识 -->
+    <name>WeChatMiniProgram</name>
+    <!-- 打包方式（默认为 jar） -->
+    <packaging>jar</packaging>
+    <description>tofuls scrm spring boot service</description>
+    <!-- 版本控制 -->
+    <properties>
+        <!-- 指定java版本 -->
+        <java.version>22</java.version>
+    </properties>
+
+    <!-- 依赖 -->
+    <dependencies>
+
+        <!-- lombok依赖 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+        </dependency>
+        <!-- Web应用程序启动器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 单元测试库 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
