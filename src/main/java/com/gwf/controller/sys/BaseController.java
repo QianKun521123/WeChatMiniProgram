@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/base")
 public class BaseController {
 
     private final BaseService baseService;
 
-    @GetMapping("/sysinfo")
+    @GetMapping("/")
     public String BaseSysInfo() {
         return baseService.BaseSysInfo();
     }
