@@ -20,11 +20,15 @@
     <name>WeChatMiniProgram</name>
     <!-- 打包方式（默认为 jar） -->
     <packaging>jar</packaging>
-    <description>tofuls scrm spring boot service</description>
+    <!-- 描述 -->
+    <description>a maven project</description>
+
     <!-- 版本控制 -->
     <properties>
         <!-- 指定java版本 -->
         <java.version>22</java.version>
+        <!-- 指定lombok版本 -->
+        <lombok.version>1.18.34</lombok.version>
     </properties>
 
     <!-- 依赖 -->
@@ -34,7 +38,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.34</version>
+            <version>${lombok.version}</version>
         </dependency>
         <!-- Web应用程序启动器 -->
         <dependency>
