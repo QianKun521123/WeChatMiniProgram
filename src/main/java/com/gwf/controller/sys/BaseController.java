@@ -1,5 +1,6 @@
 package com.gwf.controller.sys;
 
+import com.gwf.model.result.Result;
 import com.gwf.service.sys.BaseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class BaseController {
     private final BaseService baseService;
 
     @GetMapping("/")
-    public String BaseSysInfo() {
+    public Result BaseSysInfo() {
         return baseService.BaseSysInfo();
     }
 }

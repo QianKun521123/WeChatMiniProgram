@@ -1,6 +1,7 @@
 package com.gwf.service.sys.impl;
 
 import com.gwf.config.WeChatMiniProgramConfig;
+import com.gwf.model.result.Result;
 import com.gwf.service.sys.BaseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class BaseServiceImpl implements BaseService {
     private final WeChatMiniProgramConfig weChatMiniProgramConfig;
 
     @Override
-    public String BaseSysInfo() {
-        return weChatMiniProgramConfig.toString();
+    public Result BaseSysInfo() {
+        return Result.success( weChatMiniProgramConfig);
     }
 }
