@@ -16,7 +16,7 @@ public class BaseServiceImpl implements BaseService {
     private final WeChatMiniProgramConfig weChatMiniProgramConfig;
 
     @Override
-    public String BaseController() {
+    public String BaseSysInfo() {
         return weChatMiniProgramConfig.toString();
     }
 }

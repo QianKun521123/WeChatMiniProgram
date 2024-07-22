@@ -19,7 +19,7 @@ public class BaseController {
     private final BaseService baseService;
 
     @GetMapping("/sysinfo")
-    public String BaseController() {
-        return baseService.BaseController();
+    public String BaseSysInfo() {
+        return baseService.BaseSysInfo();
     }
 }
