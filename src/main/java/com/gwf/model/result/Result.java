@@ -1,6 +1,7 @@
 package com.gwf.model.result;
 
 import com.gwf.model.enums.ResultCodeEnum;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 /**
@@ -9,19 +10,16 @@ import lombok.Data;
  * 返回参数封装
  **/
 @Data
+@Schema(description ="统一返回格式")
 public class Result<T> {
-    /**
-     * 返回码
-     */
+
+    @Schema(description ="返回码")
     private Integer code;
 
-    /**
-     * 系统消息
-     */
+    @Schema(description ="系统消息")
     private String msg;
-    /**
-     * 请求数据的结果
-     */
+
+    @Schema(description ="请求数据的结果")
     private T data;
 
 

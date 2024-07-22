@@ -16,3 +16,34 @@ wmp:
   version: 1.0
   # 项目创建时间
   createTime: 2024-7-22
+
+
+springdoc:
+  swagger-ui:
+    # path: 配置swagger-ui.html/UI界面的访问路径,默认为/swagger-ui.html
+    path: /swagger-ui.html
+    # tags-sorter: 接口文档中的tags排序规则,默认为alpha,可选值为alpha(按字母顺序排序)或as-is(按照在代码中定义的顺序排序)
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    # path: 配置api-docs的访问路径,默认为/v3/api-docs
+    path: /v3/api-docs
+    enabled: true
+#  group-configs: 配置分组信息
+#    - group: "user"
+#      paths-to-match: '/user/**'
+#      packages-to-scan: 'com.nongda.controller'
+#    - group: "manager"
+#      paths-to-match: '/manager/**'
+#      packages-to-scan: 'com.nongda.controller'
+knife4j:
+  # 设置为true以启用Knife4j增强功能,这将再应用程序中启用Knife4j UI
+  enable: true
+  setting:
+    # language: 设置Knife4j UI的语言,默认为zh_cn,可选值为zh_cn或en
+    language: zh_cn
+  basic:
+    enable: true
+    username: admin
+    password: admin
+
