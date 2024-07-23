@@ -29,6 +29,8 @@
         <java.version>22</java.version>
         <!-- 指定lombok版本 -->
         <lombok.version>1.18.34</lombok.version>
+        <!-- 指定mapstruct版本 -->
+        <mapstruct.version>1.5.3.Final</mapstruct.version>
         <!-- 指定knife4j-openapi3-jakarta版本 -->
         <knife4j-openapi3-jakarta.version>4.5.0</knife4j-openapi3-jakarta.version>
     </properties>
@@ -49,6 +51,19 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+
+        <!-- mapstruct实体类映射依赖,必须在lombok之后,否则加载编译会获取不到get/set -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+
         <!-- Web应用程序启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,8 +1,8 @@
 package com.gwf.service.sys.impl;
 
 import com.gwf.config.WeChatMiniProgramConfig;
-import com.gwf.model.dto.sys.WeChatMiniProgramConfigResult;
-import com.gwf.model.result.Result;
+import com.gwf.model.converter.sys.WeChatMiniProgramConfigConverter;
+import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 import com.gwf.service.sys.BaseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,10 @@ public class BaseServiceImpl implements BaseService {
 
     private final WeChatMiniProgramConfig weChatMiniProgramConfig;
 
+    private final WeChatMiniProgramConfigConverter weChatMiniProgramConfigConverter;
+
     @Override
-    public WeChatMiniProgramConfigResult BaseSysInfo() {
-        return null;//weChatMiniProgramConfig;
+    public WeChatMiniProgramConfigVo BaseSysInfo() {
+        return weChatMiniProgramConfigConverter.entityToVo(weChatMiniProgramConfig);
     }
 }
