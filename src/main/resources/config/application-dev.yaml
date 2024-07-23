@@ -1,0 +1,29 @@
+
+server:
+  # 指定服务端口
+  port: 3600
+
+# 数据库配置
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+          url: jdbc:mysql://192.168.80.244:3306/qiankun?useUnicode=true&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: root
+          password: 521123
+        slave_1:
+          url: jdbc:mysql://192.168.80.244:3306/qiankun?useUnicode=true&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: root
+          password: 521123
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave_2:
+          url: jdbc:mysql://192.168.80.244:3306/qiankun?useUnicode=true&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: root
+          password: 521123
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+        #......省略
+        #以上会配置一个默认库master，一个组slave下有两个子库slave_1,slave_2

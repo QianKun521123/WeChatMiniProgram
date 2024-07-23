@@ -66,6 +66,8 @@
             <version>${mysql-connector.version}</version>
         </dependency>
 
+        <!--  -->
+
         <!-- API文档 - swagger -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>

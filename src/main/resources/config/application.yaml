@@ -38,13 +38,6 @@ springdoc:
     # path: 配置api-docs的访问路径,默认为/v3/api-docs
     path: /v3/api-docs
     enabled: true
-#  group-configs: 配置分组信息
-#    - group: "user"
-#      paths-to-match: '/user/**'
-#      packages-to-scan: 'com.nongda.controller'
-#    - group: "manager"
-#      paths-to-match: '/manager/**'
-#      packages-to-scan: 'com.nongda.controller'
 knife4j:
   # 设置为true以启用Knife4j增强功能,这将再应用程序中启用Knife4j UI
   enable: true
@@ -55,4 +48,23 @@ knife4j:
     enable: true
     username: admin
     password: admin
+
+
+
+mybatis-plus:
+  # 加载映射文件
+  mapper-locations: classpath:mapper/**/*.xml
+  # 设置别名
+  type-aliases-package: com.gwf.entity
+  configuration:
+    # 开启驼峰命名
+    map-underscore-to-camel-case: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: flag # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
 
