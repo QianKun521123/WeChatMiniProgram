@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @Author gwf
  * @Data 2024/7/22 下午12:42
@@ -21,4 +23,7 @@ public class WeChatMiniProgramConfig {
 
     /** 项目创建时间 */
     private String createTime;
+
+    /** 使用的技术和版本 */
+    private List technicalVersion;
 }

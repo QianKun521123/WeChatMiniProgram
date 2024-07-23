@@ -31,6 +31,12 @@
         <lombok.version>1.18.34</lombok.version>
         <!-- 指定mapstruct版本 -->
         <mapstruct.version>1.5.3.Final</mapstruct.version>
+        <!-- 指定Mybatils-Plus版本 -->
+        <mybatis-plus.version>3.5.7</mybatis-plus.version>
+        <!-- 指定MySql驱动版本 -->
+        <mysql-connector.version>8.0.33</mysql-connector.version>
+        <!-- 指定Dynamic-DataSource 多数据源 版本 -->
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <!-- 指定knife4j-openapi3-jakarta版本 -->
         <knife4j-openapi3-jakarta.version>4.5.0</knife4j-openapi3-jakarta.version>
     </properties>
@@ -38,7 +44,29 @@
     <!-- 依赖 -->
     <dependencies>
 
-        <!--    API文档 - swagger   -->
+
+        <!-- Mybatils-Plus 依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <!-- Dynamic-DataSource 多数据源依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+            <version>${dynamic-datasource.version}</version>
+        </dependency>
+
+        <!-- MySql驱动依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+
+        <!-- API文档 - swagger -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>

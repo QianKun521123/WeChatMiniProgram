@@ -5,4 +5,8 @@
 - knife4j-openapi3-jakarta 4.5.0
 - lombok 1.18.34
 - MapStruct 1.5.3.Final
+- dynamic-datasource 4.3.1
+- lombok 1.18.34
+- mybatis-plus 3.5.7
+- mysql-connector 8.0.33
 ## 版本记录
