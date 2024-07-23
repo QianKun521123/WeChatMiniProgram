@@ -24,6 +24,6 @@ public class BaseController {
     @GetMapping("/")
     @Operation(summary = "获取系统信息,部署验证")
     public Result<WeChatMiniProgramConfigResult> BaseSysInfo() {
-        return baseService.BaseSysInfo();
+        return Result.success(baseService.BaseSysInfo());
     }
 }

@@ -1,6 +1,7 @@
 package com.gwf.service.sys.impl;
 
 import com.gwf.config.WeChatMiniProgramConfig;
+import com.gwf.model.dto.sys.WeChatMiniProgramConfigResult;
 import com.gwf.model.result.Result;
 import com.gwf.service.sys.BaseService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class BaseServiceImpl implements BaseService {
     private final WeChatMiniProgramConfig weChatMiniProgramConfig;
 
     @Override
-    public Result BaseSysInfo() {
-        return Result.success( weChatMiniProgramConfig);
+    public WeChatMiniProgramConfigResult BaseSysInfo() {
+        return null;//weChatMiniProgramConfig;
     }
 }
