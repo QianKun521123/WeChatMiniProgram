@@ -1,4 +1,4 @@
-package com.gwf.model.dto.sys;
+package com.gwf.model.vo.sys;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.Data;
  **/
 @Data
 @Schema(description ="系统信息响应对象")
-public class WeChatMiniProgramConfigResult{
+public class WeChatMiniProgramConfigVo{
     @Schema(description = "项目名称")
     private String name;
 

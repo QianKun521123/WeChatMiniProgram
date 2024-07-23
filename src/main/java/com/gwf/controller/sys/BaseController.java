@@ -1,7 +1,7 @@
 package com.gwf.controller.sys;
 
-import com.gwf.model.dto.sys.WeChatMiniProgramConfigResult;
 import com.gwf.model.result.Result;
+import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 import com.gwf.service.sys.BaseService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -23,7 +23,7 @@ public class BaseController {
 
     @GetMapping("/")
     @Operation(summary = "获取系统信息,部署验证")
-    public Result<WeChatMiniProgramConfigResult> BaseSysInfo() {
+    public Result<WeChatMiniProgramConfigVo> BaseSysInfo() {
         return Result.success(baseService.BaseSysInfo());
     }
 }

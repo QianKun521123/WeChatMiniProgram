@@ -4,4 +4,5 @@
 - springboot 3.3.2
 - knife4j-openapi3-jakarta 4.5.0
 - lombok 1.18.34
+- MapStruct 1.5.3.Final
 ## 版本记录
