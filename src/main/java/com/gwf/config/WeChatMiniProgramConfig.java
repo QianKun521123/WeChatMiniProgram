@@ -15,15 +15,23 @@ import java.util.List;
 @Component
 @ConfigurationProperties(prefix = "wmp")
 public class WeChatMiniProgramConfig {
-    /** 项目名称 */
+    /**
+     * 项目名称
+     */
     private String name;
 
-    /** 版本 */
+    /**
+     * 版本
+     */
     private String version;
 
-    /** 项目创建时间 */
+    /**
+     * 项目创建时间
+     */
     private String createTime;
 
-    /** 使用的技术和版本 */
+    /**
+     * 使用的技术和版本
+     */
     private List technicalVersion;
 }

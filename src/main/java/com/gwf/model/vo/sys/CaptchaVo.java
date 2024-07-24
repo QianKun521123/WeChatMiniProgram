@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(description ="验证码响应对象")
+@Schema(description = "验证码响应对象")
 public class CaptchaVo {
 
     @Schema(description = "验证码缓存key")

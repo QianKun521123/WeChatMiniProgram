@@ -11,12 +11,14 @@ import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 public interface BaseService {
     /**
      * 获取系统信息
+     *
      * @return 系统说明类信息
      */
     WeChatMiniProgramConfigVo BaseSysInfo();
 
     /**
      * 获取验证码
+     *
      * @return 封装的验证码信息
      */
     CaptchaVo getCaptcha();

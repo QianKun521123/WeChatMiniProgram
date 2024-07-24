@@ -23,6 +23,7 @@ public class BaseServiceImpl implements BaseService {
 
     /**
      * 获取系统信息
+     *
      * @return 系统说明类信息
      */
     @Override
@@ -32,10 +33,12 @@ public class BaseServiceImpl implements BaseService {
 
     /**
      * 获取验证码
+     *
      * @return 封装的验证码信息
      */
     @Override
     public CaptchaVo getCaptcha() {
+
         return null;
     }
 }

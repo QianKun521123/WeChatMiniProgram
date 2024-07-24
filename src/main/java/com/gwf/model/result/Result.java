@@ -10,16 +10,16 @@ import lombok.Data;
  * 返回参数封装
  **/
 @Data
-@Schema(description ="统一返回格式")
+@Schema(description = "统一返回格式")
 public class Result<T> {
 
-    @Schema(description ="返回码")
+    @Schema(description = "返回码")
     private Integer code;
 
-    @Schema(description ="系统消息")
+    @Schema(description = "系统消息")
     private String msg;
 
-    @Schema(description ="请求数据的结果")
+    @Schema(description = "请求数据的结果")
     private T data;
 
 
@@ -28,7 +28,7 @@ public class Result<T> {
     }
 
 
-    public static <T> Result<T>  success(T data) {
+    public static <T> Result<T> success(T data) {
         Result result = new Result();
         result.setCode(ResultCodeEnum.SUCCESS.getCode());
         result.setMsg(ResultCodeEnum.SUCCESS.getMsg());

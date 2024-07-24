@@ -12,7 +12,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ResultCodeEnum {
 
-    SUCCESS(200,"成功"),
+    SUCCESS(200, "成功"),
     LOGIN_AUTH(208, "未登录"),
     AUTH_VALID_ERROR(8000, "未登录, 请登录");
 

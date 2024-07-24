@@ -11,8 +11,8 @@ import java.util.List;
  * 系统配置类的传输对象
  **/
 @Data
-@Schema(description ="系统信息响应对象")
-public class WeChatMiniProgramConfigVo{
+@Schema(description = "系统信息响应对象")
+public class WeChatMiniProgramConfigVo {
     @Schema(description = "项目名称")
     private String name;
 

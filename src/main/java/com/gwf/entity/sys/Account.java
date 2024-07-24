@@ -17,7 +17,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @TableName("account")
 public class Account {
-    /** 主键 */
+    /**
+     * 主键
+     */
     @TableId(type = IdType.AUTO)
     private Long id;
 }

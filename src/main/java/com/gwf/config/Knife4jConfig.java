@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Knife4jConfig {
     @Bean
-    public OpenAPI openAPI(){
+    public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info()
                         .title("WeChatMiniProgram的接口文档")
@@ -30,17 +30,19 @@ public class Knife4jConfig {
                         .url("http://localhost:3600"));
 
     }
+
     //    下面是分组
     @Bean
-    public GroupedOpenApi groupedOpenApi1(){
+    public GroupedOpenApi groupedOpenApi1() {
         return GroupedOpenApi.builder()
                 .group("微信小程序")
                 .pathsToMatch("/**")
                 .build();
     }
+
     //    下面是分组
     @Bean
-    public GroupedOpenApi groupedOpenApi2(){
+    public GroupedOpenApi groupedOpenApi2() {
         return GroupedOpenApi.builder()
                 .group("规划中")
                 .pathsToMatch("/student/**")

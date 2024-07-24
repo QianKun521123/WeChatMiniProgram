@@ -27,6 +27,7 @@ public class BaseController {
     public Result<WeChatMiniProgramConfigVo> BaseSysInfo() {
         return Result.success(baseService.BaseSysInfo());
     }
+
     @GetMapping("/captcha")
     @Operation(summary = "1.2、获取验证码")
     public Result<CaptchaVo> getCaptcha() {
