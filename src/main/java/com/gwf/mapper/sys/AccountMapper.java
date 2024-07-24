@@ -1,4 +1,4 @@
-package com.gwf.mapper;
+package com.gwf.mapper.sys;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gwf.entity.sys.Account;
