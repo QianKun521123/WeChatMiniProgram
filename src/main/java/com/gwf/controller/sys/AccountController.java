@@ -1,7 +1,6 @@
 package com.gwf.controller.sys;
 
 import com.gwf.model.result.Result;
-import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 import com.gwf.service.sys.AccountService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
