@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Data 2024/7/22 下午2:31
  * 基础响应控制层
  **/
-@Tag(name = "1.基础接口")
+@Tag(name = "1、基础接口")
 @RestController
 @RequiredArgsConstructor
 public class BaseController {
@@ -22,7 +22,7 @@ public class BaseController {
     private final BaseService baseService;
 
     @GetMapping("/")
-    @Operation(summary = "1.1获取系统信息,部署验证")
+    @Operation(summary = "1.1、获取系统信息,部署验证")
     public Result<WeChatMiniProgramConfigVo> BaseSysInfo() {
         return Result.success(baseService.BaseSysInfo());
     }

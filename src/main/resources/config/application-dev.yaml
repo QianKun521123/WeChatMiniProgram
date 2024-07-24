@@ -5,6 +5,12 @@ server:
 
 # 数据库配置
 spring:
+  # 热部署
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     dynamic:

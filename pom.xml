@@ -68,7 +68,6 @@
             <version>${mysql-connector.version}</version>
         </dependency>
 
-
         <!-- druid连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -114,6 +113,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- 热部署依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
     </dependencies>
 
 

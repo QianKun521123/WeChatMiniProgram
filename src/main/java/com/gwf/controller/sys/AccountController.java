@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Data 2024/7/23 下午6:34
  * 账户控制层接口
  **/
-@Tag(name = "2.账户控制层接口")
+@Tag(name = "2、账户控制层接口")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/sys/account")
@@ -25,7 +25,7 @@ public class AccountController {
 
 
     @GetMapping("/list")
-    @Operation(summary = "2.1获取信息列表")
+    @Operation(summary = "2.1、获取信息列表")
     public Result list() {
         return Result.success(accountService.list());
     }

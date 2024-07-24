@@ -19,7 +19,7 @@ public class Knife4jConfig {
     public OpenAPI openAPI(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("knife4j测试的接口文档")
+                        .title("WeChatMiniProgram的接口文档")
                         .description("这是基于knife4j-openapi3-jakarta-spring-boot-starter的接口文档")
                         .version("1.0")
                         .contact(new Contact()
