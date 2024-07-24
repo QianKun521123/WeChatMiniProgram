@@ -1,5 +1,6 @@
 package com.gwf.controller.sys;
 
+import com.gwf.annotation.PreventDuplicateSubmit;
 import com.gwf.model.result.Result;
 import com.gwf.model.vo.sys.CaptchaVo;
 import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
@@ -23,6 +24,7 @@ public class BaseController {
     private final BaseService baseService;
 
     @GetMapping("/")
+    @PreventDuplicateSubmit
     @Operation(summary = "1.1、获取系统信息,部署验证")
     public Result<WeChatMiniProgramConfigVo> BaseSysInfo() {
         return Result.success(baseService.BaseSysInfo());

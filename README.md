@@ -11,6 +11,7 @@
 - mysql-connector 8.0.33
 - hutool 5.8.29
 - springboot-redis
+- Log4j2 性能高于logback
 
 [//]: # (- druid 1.2.23 性能不如HikariCP 所以弃用)
 ## 版本记录
