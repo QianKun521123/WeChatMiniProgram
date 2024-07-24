@@ -9,5 +9,8 @@
 - lombok 1.18.34
 - mybatis-plus 3.5.7
 - mysql-connector 8.0.33
-- druid 1.2.23 性能不如HikariCP 所以弃用
+- hutool 5.8.29
+- springboot-redis
+
+[//]: # (- druid 1.2.23 性能不如HikariCP 所以弃用)
 ## 版本记录

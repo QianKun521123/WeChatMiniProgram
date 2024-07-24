@@ -29,11 +29,13 @@
         <java.version>22</java.version>
         <!-- 指定druid连接池版本 -->
         <druid.version>1.2.23</druid.version>
+        <!-- 指定hutool连接池版本 -->
+        <hutool.version>5.8.29</hutool.version>
         <!-- 指定lombok版本 -->
         <lombok.version>1.18.34</lombok.version>
         <!-- 指定mapstruct版本 -->
         <mapstruct.version>1.5.3.Final</mapstruct.version>
-        <!-- 指定Mybatils-Plus版本 -->
+        <!-- 指定Mybatis-Plus版本 -->
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <!-- 指定MySql驱动版本 -->
         <mysql-connector.version>8.0.33</mysql-connector.version>
@@ -46,8 +48,13 @@
     <!-- 依赖 -->
     <dependencies>
 
+        <!-- redis依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
-        <!-- Mybatils-Plus 依赖 -->
+        <!-- Mybatis-Plus 依赖 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
@@ -112,6 +119,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- hutool工具 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
 
         <!-- 热部署依赖 -->

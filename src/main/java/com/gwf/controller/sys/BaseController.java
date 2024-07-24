@@ -1,6 +1,7 @@
 package com.gwf.controller.sys;
 
 import com.gwf.model.result.Result;
+import com.gwf.model.vo.sys.CaptchaVo;
 import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 import com.gwf.service.sys.BaseService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -25,5 +26,10 @@ public class BaseController {
     @Operation(summary = "1.1、获取系统信息,部署验证")
     public Result<WeChatMiniProgramConfigVo> BaseSysInfo() {
         return Result.success(baseService.BaseSysInfo());
+    }
+    @GetMapping("/captcha")
+    @Operation(summary = "1.2、获取验证码")
+    public Result<CaptchaVo> getCaptcha() {
+        return Result.success(baseService.getCaptcha());
     }
 }
