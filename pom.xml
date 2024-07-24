@@ -29,6 +29,8 @@
         <java.version>22</java.version>
         <!-- 指定druid连接池版本 -->
         <druid.version>1.2.23</druid.version>
+        <!-- 指定fastjson2连接池版本 -->
+        <fastjson2.version>2.0.52</fastjson2.version>
         <!-- 指定hutool连接池版本 -->
         <hutool.version>5.8.29</hutool.version>
         <!-- 指定lombok版本 -->
@@ -47,6 +49,13 @@
 
     <!-- 依赖 -->
     <dependencies>
+
+        <!-- redis依赖 -->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
+        </dependency>
 
         <!-- redis依赖 -->
         <dependency>
@@ -113,7 +122,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
-                <exclusion>
+                <exclusion><!-- 去除springboot默认配置 -->
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
