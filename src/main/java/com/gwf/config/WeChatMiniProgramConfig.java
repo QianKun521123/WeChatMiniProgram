@@ -33,5 +33,5 @@ public class WeChatMiniProgramConfig {
     /**
      * 使用的技术和版本
      */
-    private List technicalVersion;
+    private List<String> technicalVersion;
 }

@@ -23,5 +23,5 @@ public class WeChatMiniProgramConfigVo {
     private String createTime;
 
     @Schema(description = "使用的技术和版本")
-    private List technicalVersion;
+    private List<String> technicalVersion;
 }
