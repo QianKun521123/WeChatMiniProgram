@@ -1,11 +1,14 @@
 package com.gwf.service.sys.impl;
 
+import cn.hutool.captcha.generator.CodeGenerator;
 import com.gwf.config.WeChatMiniProgramConfig;
+import com.gwf.config.captcha.CaptchaProperties;
 import com.gwf.model.converter.sys.WeChatMiniProgramConfigConverter;
 import com.gwf.model.vo.sys.CaptchaVo;
 import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
 import com.gwf.service.sys.BaseService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,8 +21,12 @@ import org.springframework.stereotype.Service;
 public class BaseServiceImpl implements BaseService {
 
     private final WeChatMiniProgramConfig weChatMiniProgramConfig;
-
     private final WeChatMiniProgramConfigConverter weChatMiniProgramConfigConverter;
+
+
+    private final RedisTemplate<String,Object> redisTemplate;
+    private final CaptchaProperties captchaProperties;
+    private final CodeGenerator codeGenerator;
 
     /**
      * 获取系统信息
