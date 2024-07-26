@@ -1,8 +1,10 @@
 package com.gwf.service.sys.impl;
 
 import cn.hutool.captcha.generator.CodeGenerator;
+import cn.hutool.core.util.IdUtil;
 import com.gwf.config.WeChatMiniProgramConfig;
 import com.gwf.config.captcha.CaptchaProperties;
+import com.gwf.constants.CacheConstants;
 import com.gwf.model.converter.sys.WeChatMiniProgramConfigConverter;
 import com.gwf.model.vo.sys.CaptchaVo;
 import com.gwf.model.vo.sys.WeChatMiniProgramConfigVo;
@@ -46,6 +48,9 @@ public class BaseServiceImpl implements BaseService {
     @Override
     public CaptchaVo getCaptcha() {
 
+        // 保存验证码信息
+        String uuid = IdUtil.simpleUUID(); // fastSimpleUUID
+        String verifyKey = CacheConstants.CAPTCHA_CODE_KEY + uuid;
         return null;
     }
 }
