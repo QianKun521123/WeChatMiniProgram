@@ -118,3 +118,8 @@ captcha:
   # 验证码有效期(秒)
   expire-seconds: 120
 
+
+token:
+  header: Authorization
+  secret: abcdefghijklmnopqrstuvwxyz
+  expireTime: 10080

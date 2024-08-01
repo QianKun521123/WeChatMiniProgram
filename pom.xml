@@ -27,6 +27,9 @@
     <properties>
         <!-- 指定java版本 -->
         <java.version>22</java.version>
+        <!-- 指定jjwt连接池版本 -->
+        <jjwt.version>0.9.1</jjwt.version>
+<!--        <jjwt.version>0.12.6</jjwt.version>-->
         <!-- 指定druid连接池版本 -->
         <druid.version>1.2.23</druid.version>
         <!-- 指定fastjson2连接池版本 -->
@@ -50,16 +53,43 @@
     <!-- 依赖 -->
     <dependencies>
 
-        <!-- redis依赖 -->
+        <!-- Token生成与解析 jjwt+jdk1.8+异常 2018后未维护 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-api</artifactId>-->
+<!--            <version>${jjwt.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-impl</artifactId>-->
+<!--            <version>${jjwt.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-jackson</artifactId>-->
+<!--            <version>${jjwt.version}</version>-->
+<!--        </dependency>-->
+        <!-- fastjson2依赖 -->
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
             <version>${fastjson2.version}</version>
         </dependency>
 
-        <!-- redis依赖 -->
+        <!-- security依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- redis依赖 -->
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
