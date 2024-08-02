@@ -22,4 +22,10 @@ public class Account {
      */
     @TableId(type = IdType.AUTO)
     private Long id;
+
+    /**
+     * 主键
+     */
+    private String name;
+
 }
