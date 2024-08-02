@@ -1,16 +1,16 @@
 package com.gwf.security.provider;
 
-import com.gwf.security.token.UsernamePasswordAuthenticationToken;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import com.gwf.security.token.UsernameAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
@@ -19,16 +19,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * 最终实际的认证
  **/
 @RequiredArgsConstructor
-public class UsernamePasswordAuthenticationProvider implements AuthenticationProvider {
+public class UsernameAuthenticationProvider implements AuthenticationProvider {
 
-    @Qualifier("usernamePasswordDetailsServiceImpl")
+    @Qualifier("usernameDetailsServiceImpl")
     private final UserDetailsService userDetailsService;
 
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         try {
-            UsernamePasswordAuthenticationToken tokenReq = (UsernamePasswordAuthenticationToken) authentication;
+            UsernameAuthenticationToken tokenReq = (UsernameAuthenticationToken) authentication;
 
             // 根据手机号码，查找登录人信息....
             UserDetails userDetails = userDetailsService.loadUserByUsername(tokenReq.getUsername());
@@ -38,7 +38,7 @@ public class UsernamePasswordAuthenticationProvider implements AuthenticationPro
                 throw new BadCredentialsException("密码错误");
             }
 
-            return new org.springframework.security.authentication.UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            return new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         } catch (BadCredentialsException | UsernameNotFoundException e) {
             throw e;
         } catch (Exception e) {
@@ -48,6 +48,6 @@ public class UsernamePasswordAuthenticationProvider implements AuthenticationPro
 
     @Override
     public boolean supports(Class<?> authentication) {
-        return (UsernamePasswordAuthenticationToken.class.isAssignableFrom(authentication));
+        return (UsernameAuthenticationToken.class.isAssignableFrom(authentication));
     }
 }

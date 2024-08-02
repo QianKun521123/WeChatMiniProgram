@@ -15,3 +15,9 @@
 
 [//]: # (- druid 1.2.23 性能不如HikariCP 所以弃用)
 ## 版本记录
+
+
+
+Security
+1.用户提登录信息
+2.经UsernamePasswordAuthenticationFilter(Filter)登录信息封装为UsernamePasswordAuthenticationToken对象交给

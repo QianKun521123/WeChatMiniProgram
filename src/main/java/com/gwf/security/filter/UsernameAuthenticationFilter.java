@@ -1,7 +1,7 @@
 package com.gwf.security.filter;
 
 import cn.hutool.core.util.StrUtil;
-import com.gwf.security.token.UsernamePasswordAuthenticationToken;
+import com.gwf.security.token.UsernameAuthenticationToken;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -18,11 +18,11 @@ import java.io.IOException;
  * @Data 2024/8/1 下午6:00
  * 用户密码登录过滤器
  **/
-public class UsernamePasswordAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
+public class UsernameAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
     private static final String REQUEST_MATCHER = "POST";
 
-    public UsernamePasswordAuthenticationFilter() {
+    public UsernameAuthenticationFilter() {
         super(new AntPathRequestMatcher("/login", REQUEST_MATCHER));
     }
 
@@ -44,7 +44,7 @@ public class UsernamePasswordAuthenticationFilter extends AbstractAuthentication
             throw new AuthenticationServiceException("密码不能为空");
         }
 
-        return this.getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        return this.getAuthenticationManager().authenticate(new UsernameAuthenticationToken(username, password));
     }
 
     private String getUsername(HttpServletRequest request) {

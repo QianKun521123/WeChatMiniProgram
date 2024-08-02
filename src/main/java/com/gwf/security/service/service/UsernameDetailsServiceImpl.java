@@ -19,7 +19,7 @@ import java.util.HashSet;
  **/
 @Service
 @RequiredArgsConstructor
-public class UsernamePasswordDetailsServiceImpl implements UserDetailsService {
+public class UsernameDetailsServiceImpl implements UserDetailsService {
 
     private final AccountMapper accountMapper;
 

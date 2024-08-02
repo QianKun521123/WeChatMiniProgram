@@ -12,7 +12,7 @@ import org.springframework.security.authentication.AbstractAuthenticationToken;
  **/
 @Setter
 @Getter
-public class UsernamePasswordAuthenticationToken extends AbstractAuthenticationToken {
+public class UsernameAuthenticationToken extends AbstractAuthenticationToken {
 
     private String username;
 
@@ -20,7 +20,7 @@ public class UsernamePasswordAuthenticationToken extends AbstractAuthenticationT
 
     private String code;
 
-    public UsernamePasswordAuthenticationToken(String username, String password) {
+    public UsernameAuthenticationToken(String username, String password) {
         super(null);
         this.username = username;
         this.password = password;
